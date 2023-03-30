@@ -1,0 +1,14 @@
+.a-GV-row .a-GV-cell.u-success {
+  background-color: var(--ut-palette-success);
+  color: var(--ut-palette-success-contrast);
+}
+
+.a-GV-row .a-GV-cell.u-warning {
+  background-color: var(--ut-palette-warning);
+  color: var(--ut-palette-warning-contrast);
+}
+
+.a-GV-row .a-GV-cell.u-danger {
+  background-color: var(--ut-palette-danger);
+  color: var(--ut-palette-danger-contrast);
+}
