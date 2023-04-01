@@ -51,6 +51,7 @@ var holyGrid = holyGrid || {};
     if (myRegion) {
       var myView = myRegion.call("getCurrentView");
       var model = myView.model;
+
       model.forEach(function (record, index, id) {
         var meta = model.getRecordMetadata(id);
         var fields = meta.fields;

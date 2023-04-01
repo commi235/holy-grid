@@ -1,7 +1,7 @@
 /*global apex */
 
 // Get or Create Namespace
-// PLease do not polute the global namespace
+// Please do not polute the global namespace
 var holyGrid = holyGrid || {};
 
 (function ($, region) {
@@ -21,18 +21,22 @@ var holyGrid = holyGrid || {};
   function _registerSubscription(regionId, callback) {
     var myRegion = region(regionId);
     if (myRegion) {
+      apex.debug.info("Region found", myRegion);
       var myView = myRegion.call("getCurrentView");
       var existingModel = myView.model;
 
       if (existingModel) {
+        apex.debug.info("Found existing model", existingModel);
         _subscribe(existingModel, myView, callback);
       }
 
+      apex.debug.info("Register model create event handler", regionId);
       $("#" + regionId).on(igModelCreate, function (event, ui) {
+        apex.debug.info("New model created", regionId, ui.model);
         _subscribe(ui.model, myView, callback);
       });
     } else {
-      console.warn("Region ID " + regionId + " not found.");
+      apex.debug.warn("Unable to find region", regionId);
     }
   }
 

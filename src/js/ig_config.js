@@ -3,6 +3,8 @@
 var holyGrid = holyGrid || {};
 
 (function ($) {
+  // Preparing an own configuration for known actions
+  // moving the payload needed for adding a control into data cleans up the code
   const defaultSettings = {
     buttons: {
       delete: {

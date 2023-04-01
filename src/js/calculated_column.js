@@ -8,7 +8,7 @@ function( options ) {
 
   // Add dependsOn and calValue
   // dependsOn works similar to cascading LOV definition
-  // calValue is the function that gets called whenever a field in dependsOn changes
+  // calclValue is the function that gets called whenever a field in dependsOn changes
   options.defaultGridColumnOptions = {
     dependsOn: ["SAL", "COMM"],
     calcValue: function( argsArray, model, record ) {

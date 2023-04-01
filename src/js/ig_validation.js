@@ -3,6 +3,7 @@
 var holyGrid = holyGrid || {};
 
 (function ($) {
+  // Constants are a good way to avoid repeating literals
   const commFieldName = "COMM";
   const salFieldName = "SAL";
   /**
@@ -36,8 +37,7 @@ var holyGrid = holyGrid || {};
     const oldCommission = change.oldValue;
 
     if (change.oldValue == "") {
-      // if there is no old commisiion compare against salary
-      //var currentSalary = parseInt(change.record[salFieldKey]);
+      // if there is no old commission compare against salary
       const commToSalPct = newCommission / currentSalary;
       if (commToSalPct > 0.1) {
         returnObject.result = "error";
